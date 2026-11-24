@@ -2,161 +2,484 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Udaiveer Singh | Data Analyst Portfolio</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: #080d19;
-      color: #f4f7ff;
-      font-family: Arial, sans-serif;
-      line-height: 1.7;
-    }
-    a { color: inherit; text-decoration: none; }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 8%;
-      position: sticky;
-      top: 0;
-      background: #080d19ee;
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid #25334b;
-      z-index: 10;
-    }
-    .logo { color: #60a5fa; font-size: 22px; font-weight: bold; }
-    nav { display: flex; gap: 24px; }
-    nav a { color: #cbd5e1; font-size: 14px; }
-    nav a:hover { color: #60a5fa; }
-    section { padding: 85px 10%; }
-    .hero {
-      min-height: 82vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background: radial-gradient(ellipse at 80% 20%, #15315a 0%, transparent 45%);
-    }
-    .tag { color: #60a5fa; letter-spacing: 3px; font-size: 13px; }
-    h1 { font-size: clamp(42px, 7vw, 76px); line-height: 1.15; margin: 20px 0; }
-    h1 span, h2 span { color: #60a5fa; }
-    .hero p { color: #aab8ce; max-width: 650px; font-size: 18px; }
-    .btn {
-      display: inline-block;
-      margin: 25px 12px 0 0;
-      padding: 12px 23px;
-      background: #2563eb;
-      border-radius: 7px;
-      font-weight: bold;
-    }
-    .btn.outline { background: transparent; border: 1px solid #60a5fa; }
-    h2 { font-size: 34px; margin-bottom: 25px; }
-    .about, .contact { background: #0d1525; }
-    .muted { color: #aab8ce; max-width: 800px; }
-    .skills, .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 18px;
-    }
-    .card {
-      background: #111d31;
-      border: 1px solid #263a59;
-      border-radius: 12px;
-      padding: 24px;
-      transition: transform .25s, border-color .25s;
-    }
-    .card:hover { transform: translateY(-6px); border-color: #60a5fa; }
-    .card h3 { color: #60a5fa; margin-bottom: 10px; }
-    .card p { color: #aab8ce; font-size: 14px; }
-    .project-link { display: inline-block; margin-top: 15px; color: #60a5fa; }
-    footer {
-      text-align: center;
-      padding: 25px;
-      color: #8392aa;
-      border-top: 1px solid #25334b;
-    }
-    @media(max-width: 650px) {
-      header { flex-direction: column; gap: 12px; }
-      nav { gap: 13px; flex-wrap: wrap; justify-content: center; }
-      section { padding: 65px 7%; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Udaiveer Singh - Aspiring Data Analyst Portfolio">
+<title>Udaiveer Singh | Data Analyst</title>
+
+<style>
+:root {
+  --bg: #080d19;
+  --card: #111d31;
+  --blue: #60a5fa;
+  --text: #f4f7ff;
+  --muted: #aab8ce;
+  --border: #263a59;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 84%;
+  max-width: 1150px;
+  margin: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8,13,25,.94);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  min-height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--blue);
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: #cbd5e1;
+  font-size: 14px;
+  transition: .3s;
+}
+
+nav a:hover { color: var(--blue); }
+
+.hero {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 80% 20%, #17365e 0%, transparent 40%),
+    var(--bg);
+}
+
+.hero-content { max-width: 780px; }
+
+.tag {
+  color: var(--blue);
+  letter-spacing: 3px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 1.15;
+  margin: 22px 0;
+}
+
+.highlight { color: var(--blue); }
+
+.hero h2 {
+  color: #dbeafe;
+  font-size: clamp(22px, 3vw, 32px);
+  margin-bottom: 18px;
+}
+
+.hero p, .muted {
+  color: var(--muted);
+  max-width: 700px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 23px;
+  border-radius: 7px;
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: #3b82f6;
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--blue);
+  color: var(--blue);
+}
+
+.btn-outline:hover {
+  background: #172943;
+}
+
+section { padding: 90px 0; }
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.section-title span { color: var(--blue); }
+
+.dark-section { background: #0d1525; }
+
+.about-box {
+  background: var(--card);
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+}
+
+.about-box p {
+  color: var(--muted);
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 25px;
+  color: #dbeafe;
+}
+
+.skills-grid, .projects-grid, .social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  padding: 25px;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  border-color: var(--blue);
+  box-shadow: 0 10px 35px #2563eb18;
+}
+
+.card-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.project-link {
+  display: inline-block;
+  color: var(--blue);
+  margin-top: 18px;
+  font-weight: bold;
+}
+
+.project-link:hover { text-decoration: underline; }
+
+.social-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  padding: 23px 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: .3s;
+}
+
+.social-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--blue);
+  background: #172943;
+}
+
+.social-icon {
+  font-size: 30px;
+}
+
+.social-card strong { color: var(--blue); }
+.social-card small { color: var(--muted); }
+
+.contact-note {
+  margin-bottom: 25px;
+}
+
+footer {
+  padding: 28px 10px;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+@media(max-width: 700px) {
+  .container { width: 90%; }
+
+  .navbar {
+    flex-direction: column;
+    padding: 15px 0;
+    gap: 12px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero { min-height: 570px; }
+
+  section { padding: 65px 0; }
+
+  .section-title { font-size: 29px; }
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <div class="logo">UDAIVEER.</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <div class="container navbar">
+    <a href="#home" class="logo">UDAIVEER.</a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
+<main>
+
 <section class="hero" id="home">
-  <div class="tag">WELCOME TO MY PORTFOLIO</div>
-  <h1>Hi, I'm <span>Udaiveer Singh</span></h1>
-  <h2>Aspiring Data Analyst</h2>
-  <p>
-    I am passionate about data analytics and transforming raw data
-    into meaningful insights using Python, SQL, Excel and Power BI.
-  </p>
-  <div>
-    <a class="btn" href="#projects">Explore My Projects</a>
-    <a class="btn outline" href="#contact">Contact Me</a>
+  <div class="container">
+    <div class="hero-content">
+      <div class="tag">WELCOME TO MY PORTFOLIO</div>
+
+      <h1>
+        Hi, I'm <span class="highlight">Udaiveer Singh</span>
+      </h1>
+
+      <h2>Aspiring Data Analyst</h2>
+
+      <p>
+        Passionate about data analytics, data cleaning and
+        transforming raw data into meaningful business insights
+        using Python, Pandas, SQL, Excel and Power BI.
+      </p>
+
+      <div class="buttons">
+        <a href="#projects" class="btn">Explore Projects ↗</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="about" id="about">
-  <h2>About <span>Me</span></h2>
-  <p class="muted">
-    I am an aspiring Data Analyst with an interest in data cleaning,
-    data visualization and business insights. I am continuously
-    learning and building practical projects to improve my analytical
-    and technical skills.
-    <br><br>
-    Education: BA – First Year
-  </p>
+<section class="dark-section" id="about">
+  <div class="container">
+    <h2 class="section-title">About <span>Me</span></h2>
+
+    <div class="about-box">
+      <p>
+        Hello! I'm Udaiveer Singh, an aspiring Data Analyst
+        interested in exploring data, finding patterns and
+        creating useful insights.
+
+        I am continuously improving my technical skills through
+        practical projects and hands-on learning.
+      </p>
+
+      <div class="info">
+        <span>🎓 Education: BA – First Year</span>
+        <span>📊 Field: Data Analytics</span>
+        <span>💻 Focus: Practical Projects</span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="skills">
-  <h2>Technical <span>Skills</span></h2>
-  <div class="skills">
-    <div class="card"><h3>Python</h3><p>Data analysis and programming basics.</p></div>
-    <div class="card"><h3>Pandas</h3><p>Data cleaning, filtering and analysis.</p></div>
-    <div class="card"><h3>SQL</h3><p>Queries, filtering and data management.</p></div>
-    <div class="card"><h3>Microsoft Excel</h3><p>Formulas, Pivot Tables and dashboards.</p></div>
-    <div class="card"><h3>Power BI</h3><p>Data visualization and reporting.</p></div>
-    <div class="card"><h3>NumPy</h3><p>Numerical computing fundamentals.</p></div>
+  <div class="container">
+    <h2 class="section-title">Technical <span>Skills</span></h2>
+
+    <div class="skills-grid">
+
+      <div class="card">
+        <div class="card-icon">🐍</div>
+        <h3>Python</h3>
+        <p>Programming fundamentals and data analysis.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🐼</div>
+        <h3>Pandas</h3>
+        <p>Data cleaning, filtering and manipulation.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🗄️</div>
+        <h3>SQL</h3>
+        <p>Queries, data filtering and database analysis.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>Microsoft Excel</h3>
+        <p>Formulas, Pivot Tables and dashboards.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📈</div>
+        <h3>Power BI</h3>
+        <p>Data visualization and reporting.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🔢</div>
+        <h3>NumPy</h3>
+        <p>Numerical computing fundamentals.</p>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<section class="about" id="projects">
-  <h2>My <span>Projects</span></h2>
-  <div class="projects">
-    <div class="card">
-      <h3>E-commerce Orders Analysis</h3>
-      <p>Data analysis project using Python and Pandas.</p>
-      <a class="project-link" href="https://github.com/udaiveersinghchawda08-ai/ecommerce-orders-analysis">View Project →</a>
-    </div>
-    <div class="card">
-      <h3>Sales Data Analysis</h3>
-      <p>Sales data analysis using Excel and SQL.</p>
-      <a class="project-link" href="https://github.com/udaiveersinghchawda08-ai">View GitHub →</a>
+<section class="dark-section" id="projects">
+  <div class="container">
+    <h2 class="section-title">My <span>Projects</span></h2>
+
+    <div class="projects-grid">
+
+      <div class="card">
+        <div class="card-icon">🛒</div>
+        <h3>E-commerce Orders Analysis</h3>
+        <p>
+          An E-commerce data analysis project using
+          Python and Pandas.
+        </p>
+        <a class="project-link"
+           href="https://github.com/udaiveersinghchawda08-ai/ecommerce-orders-analysis"
+           target="_blank" rel="noopener noreferrer">
+          View Project ↗
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>Sales Data Analysis</h3>
+        <p>
+          Sales data analysis project with Python,
+          SQL and data cleaning.
+        </p>
+        <a class="project-link"
+           href="https://github.com/udaiveersinghchawda08-ai"
+           target="_blank" rel="noopener noreferrer">
+          Explore GitHub ↗
+        </a>
+      </div>
+
     </div>
   </div>
 </section>
 
 <section id="contact">
-  <h2>Let's <span>Connect</span></h2>
-  <p class="muted">Feel free to connect with me for professional opportunities and collaboration.</p>
-  <a class="btn" href="https://github.com/udaiveersinghchawda08-ai">GitHub</a>
-  <a class="btn outline" href="https://www.linkedin.com/">LinkedIn</a>
+  <div class="container">
+    <h2 class="section-title">Let's <span>Connect</span></h2>
+
+    <p class="muted contact-note">
+      Feel free to connect with me for professional
+      opportunities, projects and collaboration.
+    </p>
+
+    <div class="social-grid">
+
+      <a class="social-card"
+         href="https://www.instagram.com/udaiveer_analyst/"
+         target="_blank" rel="noopener noreferrer">
+        <span class="social-icon">📸</span>
+        <strong>Instagram</strong>
+        <small>@udaiveer_analyst</small>
+      </a>
+
+      <a class="social-card"
+         href="https://www.linkedin.com/in/udaiveer-singh-data-analyst/"
+         target="_blank" rel="noopener noreferrer">
+        <span class="social-icon">💼</span>
+        <strong>LinkedIn</strong>
+        <small>Professional Profile</small>
+      </a>
+
+      <a class="social-card"
+         href="https://github.com/udaiveersinghchawda08-ai"
+         target="_blank" rel="noopener noreferrer">
+        <span class="social-icon">🐙</span>
+        <strong>GitHub</strong>
+        <small>My Projects</small>
+      </a>
+
+      <a class="social-card"
+         href="mailto:udaiveersinghchawda08@gmail.com">
+        <span class="social-icon">✉️</span>
+        <strong>Gmail</strong>
+        <small>Send an Email</small>
+      </a>
+
+    </div>
+  </div>
 </section>
+
+</main>
 
 <footer>
   © 2026 Udaiveer Singh | Data Analyst Portfolio
