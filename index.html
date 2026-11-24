@@ -9,7 +9,6 @@
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -41,12 +40,7 @@
     }
 
     nav { display: flex; gap: 24px; }
-
-    nav a {
-      color: #cbd5e1;
-      font-size: 14px;
-    }
-
+    nav a { color: #cbd5e1; font-size: 14px; }
     nav a:hover { color: #60a5fa; }
 
     section { padding: 85px 10%; }
@@ -93,17 +87,11 @@
       border: 1px solid #60a5fa;
     }
 
-    h2 {
-      font-size: 34px;
-      margin-bottom: 25px;
-    }
+    h2 { font-size: 34px; margin-bottom: 25px; }
 
     .about, .contact { background: #0d1525; }
 
-    .muted {
-      color: #aab8ce;
-      max-width: 800px;
-    }
+    .muted { color: #aab8ce; max-width: 800px; }
 
     .skills, .projects {
       display: grid;
@@ -124,15 +112,8 @@
       border-color: #60a5fa;
     }
 
-    .card h3 {
-      color: #60a5fa;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #aab8ce;
-      font-size: 14px;
-    }
+    .card h3 { color: #60a5fa; margin-bottom: 10px; }
+    .card p { color: #aab8ce; font-size: 14px; }
 
     .project-icon {
       width: 38px;
@@ -273,37 +254,12 @@
   <h2>Technical <span>Skills</span></h2>
 
   <div class="skills">
-
-    <div class="card">
-      <h3>Python</h3>
-      <p>Data analysis and programming basics.</p>
-    </div>
-
-    <div class="card">
-      <h3>Pandas</h3>
-      <p>Data cleaning, filtering and analysis.</p>
-    </div>
-
-    <div class="card">
-      <h3>SQL</h3>
-      <p>Queries, filtering and data management.</p>
-    </div>
-
-    <div class="card">
-      <h3>Microsoft Excel</h3>
-      <p>Formulas, Pivot Tables and dashboards.</p>
-    </div>
-
-    <div class="card">
-      <h3>Power BI</h3>
-      <p>Data visualization and reporting.</p>
-    </div>
-
-    <div class="card">
-      <h3>NumPy</h3>
-      <p>Numerical computing fundamentals.</p>
-    </div>
-
+    <div class="card"><h3>Python</h3><p>Data analysis and programming basics.</p></div>
+    <div class="card"><h3>Pandas</h3><p>Data cleaning, filtering and analysis.</p></div>
+    <div class="card"><h3>SQL</h3><p>Queries, filtering and data management.</p></div>
+    <div class="card"><h3>Microsoft Excel</h3><p>Formulas, Pivot Tables and dashboards.</p></div>
+    <div class="card"><h3>Power BI</h3><p>Data visualization and reporting.</p></div>
+    <div class="card"><h3>NumPy</h3><p>Numerical computing fundamentals.</p></div>
   </div>
 </section>
 
@@ -314,20 +270,19 @@
 
   <div class="projects">
 
-    <div class="card">
+    <!-- E-commerce Project: Shopping Cart Icon -->
 
+    <div class="card">
       <svg class="project-icon" viewBox="0 0 24 24"
            fill="none" stroke="currentColor"
            stroke-width="1.8" stroke-linecap="round"
-           stroke-linejoin="round" aria-hidden="true">
-        <path d="M3 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 8H6"/>
-        <circle cx="10" cy="21" r="1"/>
-        <circle cx="18" cy="21" r="1"/>
-        <path d="M9 11h9"/>
+           stroke-linejoin="round" aria-label="Shopping Cart Icon">
+        <circle cx="9" cy="21" r="1"/>
+        <circle cx="20" cy="21" r="1"/>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
       </svg>
 
       <h3>E-commerce Orders Analysis</h3>
-
       <p>Data analysis project using Python and Pandas.</p>
 
       <a class="project-link"
@@ -335,22 +290,22 @@
          target="_blank" rel="noopener noreferrer">
         View Project →
       </a>
-
     </div>
 
-    <div class="card">
+    <!-- Sales Project: Bar Chart Icon -->
 
+    <div class="card">
       <svg class="project-icon" viewBox="0 0 24 24"
            fill="none" stroke="currentColor"
            stroke-width="1.8" stroke-linecap="round"
-           stroke-linejoin="round" aria-hidden="true">
+           stroke-linejoin="round" aria-label="Bar Chart Icon">
         <path d="M3 3v18h18"/>
-        <path d="M7 14l4-4 4 3 6-7"/>
-        <path d="M17 6h4v4"/>
+        <rect x="7" y="12" width="3" height="6" rx="0.5"/>
+        <rect x="13" y="8" width="3" height="10" rx="0.5"/>
+        <rect x="19" y="4" width="3" height="14" rx="0.5"/>
       </svg>
 
       <h3>Sales Data Analysis</h3>
-
       <p>Sales data analysis using Excel and SQL.</p>
 
       <a class="project-link"
@@ -358,7 +313,6 @@
          target="_blank" rel="noopener noreferrer">
         View GitHub →
       </a>
-
     </div>
 
   </div>
@@ -377,6 +331,8 @@
 
   <div class="social-links">
 
+    <!-- Instagram -->
+
     <a href="https://www.instagram.com/udaiveer_analyst/"
        target="_blank" rel="noopener noreferrer"
        class="social-card">
@@ -386,20 +342,22 @@
 
       <strong>Instagram</strong>
       <small>@udaiveer_analyst</small>
-
     </a>
+
+    <!-- LinkedIn: Official in Logo -->
 
     <a href="https://www.linkedin.com/in/udaiveer-singh-data-analyst/"
        target="_blank" rel="noopener noreferrer"
        class="social-card">
 
       <img src="https://cdn.simpleicons.org/linkedin/0A66C2"
-           alt="LinkedIn Logo">
+           alt="LinkedIn Official Logo">
 
       <strong>LinkedIn</strong>
       <small>Professional Profile</small>
-
     </a>
+
+    <!-- GitHub -->
 
     <a href="https://github.com/udaiveersinghchawda08-ai"
        target="_blank" rel="noopener noreferrer"
@@ -410,8 +368,9 @@
 
       <strong>GitHub</strong>
       <small>Explore My Projects</small>
-
     </a>
+
+    <!-- WhatsApp -->
 
     <a href="https://wa.me/917849909357"
        target="_blank" rel="noopener noreferrer"
@@ -422,8 +381,9 @@
 
       <strong>WhatsApp</strong>
       <small>Send a Message</small>
-
     </a>
+
+    <!-- Gmail -->
 
     <a href="mailto:udaiveersinghchawda08@gmail.com"
        class="social-card">
@@ -433,7 +393,6 @@
 
       <strong>Gmail</strong>
       <small>Send Me an Email</small>
-
     </a>
 
   </div>
