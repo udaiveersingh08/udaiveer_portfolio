@@ -71,6 +71,41 @@
     .card h3 { color: #60a5fa; margin-bottom: 10px; }
     .card p { color: #aab8ce; font-size: 14px; }
     .project-link { display: inline-block; margin-top: 15px; color: #60a5fa; }
+
+    .project-icon {
+      width: 42px;
+      height: 42px;
+      margin-bottom: 15px;
+      color: #60a5fa;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 25px;
+    }
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 17px;
+      background: #111d31;
+      border: 1px solid #263a59;
+      border-radius: 8px;
+      transition: .25s;
+      font-weight: bold;
+    }
+    .contact-link:hover {
+      border-color: #60a5fa;
+      transform: translateY(-4px);
+    }
+    .contact-link img {
+      width: 23px;
+      height: 23px;
+      object-fit: contain;
+    }
+
     footer {
       text-align: center;
       padding: 25px;
@@ -119,7 +154,7 @@
     learning and building practical projects to improve my analytical
     and technical skills.
     <br><br>
-    Education: BA – First Year
+    Education: Bachelor of Arts – First Year
   </p>
 </section>
 
@@ -138,24 +173,65 @@
 <section class="about" id="projects">
   <h2>My <span>Projects</span></h2>
   <div class="projects">
+
     <div class="card">
+      <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M3 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 8H6"/>
+        <circle cx="10" cy="21" r="1"/>
+        <circle cx="18" cy="21" r="1"/>
+        <path d="M9 11h9M13.5 7v8"/>
+      </svg>
       <h3>E-commerce Orders Analysis</h3>
       <p>Data analysis project using Python and Pandas.</p>
       <a class="project-link" href="https://github.com/udaiveersinghchawda08-ai/ecommerce-orders-analysis">View Project →</a>
     </div>
+
     <div class="card">
+      <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M3 3v18h18"/>
+        <path d="M7 14l4-4 4 3 6-7"/>
+        <path d="M17 6h4v4"/>
+      </svg>
       <h3>Sales Data Analysis</h3>
       <p>Sales data analysis using Excel and SQL.</p>
       <a class="project-link" href="https://github.com/udaiveersinghchawda08-ai">View GitHub →</a>
     </div>
+
   </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="contact">
   <h2>Let's <span>Connect</span></h2>
   <p class="muted">Feel free to connect with me for professional opportunities and collaboration.</p>
-  <a class="btn" href="https://github.com/udaiveersinghchawda08-ai">GitHub</a>
-  <a class="btn outline" href="https://www.linkedin.com/">LinkedIn</a>
+
+  <div class="contact-links">
+
+    <a class="contact-link" href="https://www.instagram.com/udaiveer_analyst/" target="_blank" rel="noopener noreferrer">
+      <img src="https://cdn.simpleicons.org/instagram/E4405F" alt="Instagram Logo">
+      Instagram
+    </a>
+
+    <a class="contact-link" href="https://www.linkedin.com/in/udaiveer-singh-data-analyst/" target="_blank" rel="noopener noreferrer">
+      <img src="https://cdn.simpleicons.org/linkedin/0A66C2" alt="LinkedIn Logo">
+      LinkedIn
+    </a>
+
+    <a class="contact-link" href="https://github.com/udaiveersinghchawda08-ai" target="_blank" rel="noopener noreferrer">
+      <img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub Logo">
+      GitHub
+    </a>
+
+    <a class="contact-link" href="mailto:udaiveersinghchawda08@gmail.com">
+      <img src="https://cdn.simpleicons.org/gmail/EA4335" alt="Gmail Logo">
+      Gmail
+    </a>
+
+    <a class="contact-link" href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer">
+      <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp Logo">
+      WhatsApp
+    </a>
+
+  </div>
 </section>
 
 <footer>
@@ -164,4 +240,3 @@
 
 </body>
 </html>
-
