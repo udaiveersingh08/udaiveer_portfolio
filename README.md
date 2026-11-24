@@ -7,7 +7,7 @@ I am an aspiring Data Analyst passionate about transforming raw data into meanin
 
 ## 🌐 Live Portfolio
 
-🔗 **Website:**  https://udaiveersinghchawda08-ai.github.io/udaiveer-portfolio/
+🔗 **Website:**  https://udaiveersingh08.github.io/udaiveer_portfolio/
 
 ## 👨‍💻 About Me
 
